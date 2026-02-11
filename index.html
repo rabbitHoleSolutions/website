@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbit Hole Solutions Inc.</title>
+    <meta name="description" content="Niche tools for deep nerd communities. VR apps, AI image gen tools, dev utilities, and games. We like it down here.">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Rabbit Hole Solutions Inc.">
+    <meta property="og:description" content="Niche tools for deep nerd communities. We like it down here.">
+    <meta property="og:image" content="https://rabbitholesolutions.ca/inverted.png">
+    <meta property="og:url" content="https://rabbitholesolutions.ca">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="180x180" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-logo">
+            <img src="inverted.png" alt="Rabbit Hole Solutions" width="32" height="37">
+        </a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <svg class="hero-motif" aria-hidden="true" viewBox="0 0 600 500" preserveAspectRatio="xMidYMid meet">
+                <!-- Left ear: rotated 35deg outward, anchored at base -->
+                <g transform="rotate(-35, 280, 240)">
+                    <polygon points="288,240 272,240 255,50" fill="white" opacity="0.06"/>
+                    <line x1="288" y1="240" x2="255" y2="50" stroke="white" stroke-width="1.5" opacity="0.10"/>
+                    <line x1="272" y1="240" x2="255" y2="50" stroke="white" stroke-width="1.5" opacity="0.10"/>
+                </g>
+                <!-- Right ear: rotated 35deg outward, kinked tip -->
+                <g transform="rotate(35, 320, 240)">
+                    <polygon points="312,240 328,240 338,130 358,60 348,48" fill="white" opacity="0.06"/>
+                    <polyline points="312,240 338,130 348,48" fill="none" stroke="white" stroke-width="1.5" opacity="0.10"/>
+                    <polyline points="328,240 338,130 358,60" fill="none" stroke="white" stroke-width="1.5" opacity="0.10"/>
+                    <line x1="348" y1="48" x2="358" y2="60" stroke="white" stroke-width="1.5" opacity="0.10"/>
+                </g>
+                <!-- Head circle -->
+                <circle cx="300" cy="260" r="40" fill="none" stroke="white" stroke-width="1.5" opacity="0.10"/>
+                <!-- Body circle — snug against head, like the logo -->
+                <circle cx="300" cy="330" r="55" fill="none" stroke="white" stroke-width="1.5" opacity="0.10"/>
+                <!-- Outer ring echo -->
+                <circle cx="300" cy="290" r="190" fill="none" stroke="white" stroke-width="1.5" opacity="0.08"/>
+            </svg>
+        </div>
+        <div class="hero-content">
+            <img src="inverted.png" alt="Rabbit Hole Solutions logo" class="hero-logo" width="280" height="326">
+            <h1 class="hero-title">Rabbit Hole Solutions</h1>
+            <p class="hero-tagline">We like it down here.</p>
+            <a href="#tools" class="hero-cta">See what we're building</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Down the Rabbit Hole</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Rabbit Hole Solutions is an indie studio that builds things that actually matter to us.</p>
+                    <p>We make niche tools for deep nerd communities. VR productivity apps. AI image curation utilities. Developer tools. Games.</p>
+                    <p>We offer consulting for AI integration and corporate modernization.</p>
+                </div>
+                <aside class="about-aside">
+                    <img src="about-rabbit.png" alt="Rabbit Hole Solutions mascot" class="about-image">
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2 class="section-title">What We're Building</h2>
+            <p class="section-subtitle">Niche tools for people who go deep.</p>
+
+            <!--
+            === ADD A NEW TOOL ===
+            Copy the <article> block below, paste it inside the tools-grid,
+            and fill in your details.
+
+            Status options: data-status="beta" | "beta" | "coming-soon"
+            Tag classes:    tag-vr | tag-ai | tag-oss | tag-quest | tag-dev | tag-game
+
+            <article class="tool-card" data-status="STATUS">
+                <div class="tool-icon">
+                    <svg class="tool-icon-placeholder" aria-hidden="true" viewBox="0 0 64 64">
+                        <circle cx="32" cy="44" r="16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="32" cy="26" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="27" y1="18" x2="24" y2="4" stroke="currentColor" stroke-width="1.5"/>
+                        <polyline points="37,18 38,8 41,4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h3 class="tool-name">TOOL NAME</h3>
+                <p class="tool-desc">DESCRIPTION</p>
+                <div class="tool-tags">
+                    <span class="tag TAG_CLASS">TAG</span>
+                </div>
+                <div class="tool-links">
+                    <a href="URL" class="tool-link">LINK TEXT</a>
+                </div>
+            </article>
+            -->
+
+            <div class="tools-grid">
+
+                <article class="tool-card" data-status="beta">
+                    <div class="tool-icon">
+                        <svg class="tool-icon-placeholder" aria-hidden="true" viewBox="0 0 64 64">
+                            <circle cx="32" cy="44" r="16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="32" cy="26" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="27" y1="18" x2="24" y2="4" stroke="currentColor" stroke-width="1.5"/>
+                            <polyline points="37,18 38,8 41,4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="tool-name">Highmark SSH</h3>
+                    <p class="tool-desc">A full SSH terminal for Meta Quest 3. Because sometimes you need to fix production from inside VR.</p>
+                    <div class="tool-tags">
+                        <span class="tag tag-vr">VR</span>
+                        <span class="tag tag-quest">Quest 3</span>
+                    </div>
+                    <div class="tool-links">
+                    </div>
+                </article>
+
+                <article class="tool-card" data-status="beta">
+                    <div class="tool-icon">
+                        <svg class="tool-icon-placeholder" aria-hidden="true" viewBox="0 0 64 64">
+                            <circle cx="32" cy="44" r="16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="32" cy="26" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="27" y1="18" x2="24" y2="4" stroke="currentColor" stroke-width="1.5"/>
+                            <polyline points="37,18 38,8 41,4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="tool-name">Gaze</h3>
+                    <p class="tool-desc">Image organization and tagging built for the SDXL community. Browse, tag, and curate your training datasets without losing your mind. Open source on npm. Native Quest build with extras.</p>
+                    <div class="tool-tags">
+                        <span class="tag tag-ai">AI / SDXL</span>
+                        <span class="tag tag-quest">Quest 3</span>
+                    </div>
+                    <div class="tool-links">
+                    </div>
+                </article>
+
+                <article class="tool-card" data-status="coming-soon">
+                    <div class="tool-icon">
+                        <svg class="tool-icon-placeholder" aria-hidden="true" viewBox="0 0 64 64">
+                            <circle cx="32" cy="44" r="16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="32" cy="26" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="27" y1="18" x2="24" y2="4" stroke="currentColor" stroke-width="1.5"/>
+                            <polyline points="37,18 38,8 41,4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="tool-name">Aeterna</h3>
+                    <p class="tool-desc">A hex-tile turn-based RPG where every NPC has a mind of its own. LLM-driven dialog and agency means conversations go places no script ever could. Classic exploration meets unpredictable storytelling.</p>
+                    <div class="tool-tags">
+                        <span class="tag tag-game">Game</span>
+                        <span class="tag tag-ai">AI / LLM</span>
+                    </div>
+                    <div class="tool-links">
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-intro">Got an idea? Found a bug? Want to collaborate?<br>Just want to talk about weird VR use cases?</p>
+            <div class="contact-methods">
+                <a href="mailto:hello@rabbitholesolutions.ca" class="contact-link">
+                    <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M22 4L12 13L2 4"/>
+                    </svg>
+                    hello@rabbitholesolutions.ca
+                </a>
+                <a href="https://github.com/rabbitHoleSolutions" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <img src="inverted.png" alt="" class="footer-logo" width="40" height="47">
+            <p class="footer-copy">&copy; 2026 Rabbit Hole Solutions Inc. &middot; New Westminster, BC</p>
+            <p class="footer-tagline">We like it down here.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                // Close mobile nav if open
+                document.getElementById('nav').classList.remove('nav--open');
+                document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Mobile nav toggle
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.getElementById('nav');
+        toggle.addEventListener('click', function() {
+            var open = nav.classList.toggle('nav--open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+
+        // Scroll-triggered fade-in
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.tool-card, .about-content, .section-title, .contact-methods').forEach(function(el) {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
