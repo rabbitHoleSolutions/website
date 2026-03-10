@@ -50,6 +50,7 @@ body {
     --color-tag-quest:      #0984e3;
     --color-tag-dev:        #e17055;
     --color-tag-game:       #d63031;
+    --color-tag-music:      #a29bfe;
 
     /* Typography */
     --font-heading:  'Space Grotesk', system-ui, -apple-system, sans-serif;
@@ -413,6 +414,7 @@ section {
 .tag-quest { color: var(--color-tag-quest); border-color: rgba(9, 132, 227, 0.4); }
 .tag-dev   { color: var(--color-tag-dev);   border-color: rgba(225, 112, 85, 0.4); }
 .tag-game  { color: var(--color-tag-game);  border-color: rgba(214, 48, 49, 0.4); }
+.tag-music { color: var(--color-tag-music); border-color: rgba(162, 155, 254, 0.4); }
 
 .tool-links {
     display: flex;
