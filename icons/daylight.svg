@@ -1,0 +1,42 @@
+<svg width="680" height="680" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="dl-sun" cx="42%" cy="38%" r="62%">
+    <stop offset="0%" stop-color="#f0f9ff"/>
+    <stop offset="45%" stop-color="#7dd3fc"/>
+    <stop offset="100%" stop-color="#0ea5e9"/>
+  </radialGradient>
+</defs>
+
+<rect x="0" y="0" width="680" height="680" fill="none"/>
+
+<!-- Soft halo -->
+<circle cx="340" cy="300" r="170" fill="#38bdf8" opacity="0.10"/>
+<circle cx="340" cy="300" r="142" fill="#38bdf8" opacity="0.12"/>
+
+<!-- Rays: 12 spokes around the disc -->
+<g stroke="#38bdf8" stroke-width="22" stroke-linecap="round">
+  <line x1="485.0" y1="300.0" x2="535.0" y2="300.0"/>
+  <line x1="465.6" y1="372.5" x2="508.9" y2="397.5"/>
+  <line x1="412.5" y1="425.6" x2="437.5" y2="468.9"/>
+  <line x1="340.0" y1="445.0" x2="340.0" y2="495.0"/>
+  <line x1="267.5" y1="425.6" x2="242.5" y2="468.9"/>
+  <line x1="214.4" y1="372.5" x2="171.1" y2="397.5"/>
+  <line x1="195.0" y1="300.0" x2="145.0" y2="300.0"/>
+  <line x1="214.4" y1="227.5" x2="171.1" y2="202.5"/>
+  <line x1="267.5" y1="174.4" x2="242.5" y2="131.1"/>
+  <line x1="340.0" y1="155.0" x2="340.0" y2="105.0"/>
+  <line x1="412.5" y1="174.4" x2="437.5" y2="131.1"/>
+  <line x1="465.6" y1="227.5" x2="508.9" y2="202.5"/>
+</g>
+
+<!-- Sun disc -->
+<circle cx="340" cy="300" r="118" fill="url(#dl-sun)"/>
+<circle cx="340" cy="300" r="118" fill="none" stroke="#0c4a6e" stroke-width="4" opacity="0.35"/>
+
+<!-- Document/text hint within the light: a page being brought to daylight -->
+<g stroke="#f0f9ff" stroke-linecap="round" opacity="0.85">
+  <line x1="296" y1="286" x2="392" y2="286" stroke-width="9"/>
+  <line x1="296" y1="312" x2="384" y2="312" stroke-width="9"/>
+  <line x1="296" y1="338" x2="360" y2="338" stroke-width="9"/>
+</g>
+</svg>

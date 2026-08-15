@@ -52,6 +52,8 @@ body {
     --color-tag-game:       #d63031;
     --color-tag-music:      #a29bfe;
     --color-tag-media:      #00cec9;
+    --color-tag-sec:        #e84393;
+    --color-tag-cloud:      #74b9ff;
 
     /* Typography */
     --font-heading:  'Space Grotesk', system-ui, -apple-system, sans-serif;
@@ -431,6 +433,8 @@ section {
 .tag-game  { color: var(--color-tag-game);  border-color: rgba(214, 48, 49, 0.4); }
 .tag-music { color: var(--color-tag-music); border-color: rgba(162, 155, 254, 0.4); }
 .tag-media { color: var(--color-tag-media); border-color: rgba(0, 206, 201, 0.4); }
+.tag-sec   { color: var(--color-tag-sec);   border-color: rgba(232, 67, 147, 0.4); }
+.tag-cloud { color: var(--color-tag-cloud); border-color: rgba(116, 185, 255, 0.4); }
 
 .tool-links {
     display: flex;

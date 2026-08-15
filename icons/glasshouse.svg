@@ -1,0 +1,108 @@
+<svg width="680" height="680" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
+<style>
+:root {
+  --glass-light: #7ecbf5;
+  --glass-mid: #4ba8e0;
+  --glass-dark: #2a7ab5;
+  --frame: #1a3a52;
+  --glow-warm: #f5c842;
+  --glow-soft: #fae08a;
+  --light-ray: #fceabb;
+  --glass-highlight: #b8e4fc;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glass-light: #5aaad4;
+    --glass-mid: #3889bb;
+    --glass-dark: #1d5a85;
+    --frame: #0d1f2d;
+    --glow-warm: #e0b535;
+    --glow-soft: #c9a42e;
+    --light-ray: #d4a82a;
+    --glass-highlight: #6cb8e0;
+  }
+}
+</style>
+
+<rect x="0" y="0" width="680" height="680" fill="none"/>
+
+<!-- Light cone radiating outward -->
+<g opacity="0.12">
+  <polygon points="340,60 80,520 600,520" fill="var(--glow-warm)"/>
+</g>
+<g opacity="0.07">
+  <polygon points="340,30 40,560 640,560" fill="var(--glow-warm)"/>
+</g>
+
+<!-- Light rays spilling below foundation -->
+<g opacity="0.18">
+  <line x1="340" y1="280" x2="120" y2="620" stroke="var(--light-ray)" stroke-width="40"/>
+  <line x1="340" y1="280" x2="200" y2="630" stroke="var(--light-ray)" stroke-width="30"/>
+  <line x1="340" y1="280" x2="480" y2="630" stroke="var(--light-ray)" stroke-width="30"/>
+  <line x1="340" y1="280" x2="560" y2="620" stroke="var(--light-ray)" stroke-width="40"/>
+  <line x1="340" y1="280" x2="340" y2="640" stroke="var(--light-ray)" stroke-width="25"/>
+</g>
+
+<!-- Glass panes with translucency -->
+<g>
+  <polygon points="340,100 140,300 140,540 540,540 540,300" fill="var(--glass-mid)" opacity="0.35"/>
+
+  <!-- Roof panes -->
+  <polygon points="340,100 140,300 340,300" fill="var(--glass-light)" opacity="0.5"/>
+  <polygon points="340,100 540,300 340,300" fill="var(--glass-mid)" opacity="0.45"/>
+
+  <!-- Wall panes - checkerboard transparency -->
+  <rect x="140" y="300" width="200" height="120" fill="var(--glass-light)" opacity="0.4"/>
+  <rect x="340" y="300" width="200" height="120" fill="var(--glass-mid)" opacity="0.35"/>
+  <rect x="140" y="420" width="200" height="120" fill="var(--glass-mid)" opacity="0.38"/>
+  <rect x="340" y="420" width="200" height="120" fill="var(--glass-light)" opacity="0.42"/>
+
+  <!-- Specular highlights -->
+  <rect x="240" y="300" width="100" height="60" fill="var(--glass-highlight)" opacity="0.5"/>
+  <rect x="160" y="320" width="60" height="40" fill="var(--glass-highlight)" opacity="0.3"/>
+
+  <!-- Interior glow -->
+  <ellipse cx="340" cy="460" rx="50" ry="70" fill="var(--glow-warm)" opacity="0.35"/>
+  <ellipse cx="340" cy="470" rx="30" ry="45" fill="var(--glow-soft)" opacity="0.5"/>
+  <ellipse cx="340" cy="475" rx="12" ry="20" fill="#fff" opacity="0.6"/>
+</g>
+
+<!-- Structural mullion grid -->
+<g fill="none" stroke="var(--frame)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="340,100 140,300 140,540 540,540 540,300"/>
+  <line x1="340" y1="100" x2="340" y2="540"/>
+  <line x1="140" y1="300" x2="540" y2="300"/>
+  <line x1="140" y1="420" x2="540" y2="420"/>
+  <line x1="240" y1="300" x2="240" y2="540"/>
+  <line x1="440" y1="300" x2="440" y2="540"/>
+  <line x1="340" y1="100" x2="140" y2="300"/>
+  <line x1="340" y1="100" x2="540" y2="300"/>
+  <line x1="240" y1="200" x2="240" y2="300"/>
+  <line x1="440" y1="200" x2="440" y2="300"/>
+</g>
+
+<!-- Secondary mullions -->
+<g fill="none" stroke="var(--frame)" stroke-width="2" stroke-linecap="round" opacity="0.5">
+  <line x1="190" y1="200" x2="190" y2="300"/>
+  <line x1="290" y1="200" x2="290" y2="300"/>
+  <line x1="390" y1="200" x2="390" y2="300"/>
+  <line x1="490" y1="200" x2="490" y2="300"/>
+  <line x1="190" y1="360" x2="540" y2="360"/>
+  <line x1="140" y1="480" x2="540" y2="480"/>
+</g>
+
+<!-- Outer frame emphasis -->
+<g stroke="var(--frame)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <polygon points="340,100 140,300 140,540 540,540 540,300"/>
+</g>
+
+<!-- Document text hints on panes -->
+<g opacity="0.6">
+  <line x1="160" y1="310" x2="220" y2="310" stroke="var(--glass-highlight)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="160" y1="316" x2="200" y2="316" stroke="var(--glass-highlight)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <line x1="350" y1="430" x2="420" y2="430" stroke="var(--glass-highlight)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="350" y1="436" x2="400" y2="436" stroke="var(--glass-highlight)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <line x1="450" y1="310" x2="520" y2="310" stroke="var(--glass-highlight)" stroke-width="2" stroke-linecap="round"/>
+</g>
+
+</svg>
