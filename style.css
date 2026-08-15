@@ -379,6 +379,20 @@ section {
     height: 48px;
 }
 
+/* Real app icons, for shipped products only. The --tile modifier is for square
+   store art that carries its own background; transparent line-art marks are
+   left bare so they sit like the placeholder SVGs beside them. */
+.tool-icon-img {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.tool-icon-img--tile {
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+}
+
 .tool-name {
     margin-bottom: var(--space-sm);
     padding-right: 5rem;
