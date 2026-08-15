@@ -6,13 +6,23 @@
     <title>Rabbit Hole Solutions Inc.</title>
     <meta name="description" content="Niche tools for deep nerd communities. VR apps, AI image gen tools, dev utilities, and games. We like it down here.">
     <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://rabbitholesolutions.ca/">
 
     <!-- Open Graph / Social -->
+    <meta property="og:site_name" content="Rabbit Hole Solutions Inc.">
     <meta property="og:title" content="Rabbit Hole Solutions Inc.">
     <meta property="og:description" content="Niche tools for deep nerd communities. We like it down here.">
-    <meta property="og:image" content="https://rabbitholesolutions.ca/inverted.png">
-    <meta property="og:url" content="https://rabbitholesolutions.ca">
+    <meta property="og:image" content="https://rabbitholesolutions.ca/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Rabbit Hole Solutions — we like it down here.">
+    <meta property="og:url" content="https://rabbitholesolutions.ca/">
     <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rabbit Hole Solutions Inc.">
+    <meta name="twitter:description" content="Niche tools for deep nerd communities. We like it down here.">
+    <meta name="twitter:image" content="https://rabbitholesolutions.ca/og-card.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="180x180" href="favicon.png">
@@ -24,6 +34,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <!--
+    Structured data. Only shipped products are listed — a SoftwareApplication
+    entry is a claim that the thing exists and can be had, so betas stay out.
+    Prices are deliberately omitted: they would need updating here every time
+    a store price moved, and stale structured data is worse than none.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://rabbitholesolutions.ca/#org",
+          "name": "Rabbit Hole Solutions Inc.",
+          "url": "https://rabbitholesolutions.ca/",
+          "logo": "https://rabbitholesolutions.ca/inverted.png",
+          "email": "hello@rabbitholesolutions.ca",
+          "description": "Indie software studio building niche tools for deep technical communities — VR apps, AI document tooling, developer utilities and games. Also consulting: fractional CTO, architectural oversight, AI integration and corporate modernization.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New Westminster",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "sameAs": ["https://github.com/rabbitHoleSolutions"]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Highmark SSH",
+          "description": "A full SSH terminal for Meta Quest 3.",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Meta Horizon OS",
+          "url": "https://www.meta.com/experiences/highmark-ssh/25701722399438079",
+          "publisher": { "@id": "https://rabbitholesolutions.ca/#org" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "SoundWall",
+          "description": "A VR instrument and sequencer for Meta Quest — play synths, layer drums and loop polyrhythmic tracks against a wall of 6,400 triangles.",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Meta Horizon OS",
+          "url": "https://www.meta.com/experiences/soundwall/1194084427125571/",
+          "publisher": { "@id": "https://rabbitholesolutions.ca/#org" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Glasshouse",
+          "description": "Document intelligence for organizations with large scanned archives. OCR and AI vision extract the text; keyword and semantic search make it findable, with cited answers to plain-language questions.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://rabbitholesolutions.ca/#tools",
+          "publisher": { "@id": "https://rabbitholesolutions.ca/#org" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Daylight",
+          "description": "AI security auditing for Microsoft 365. Monthly security event logs are run through heuristics, then each flagged case is examined by an LLM and written up with potential harm, legitimate explanations and recommended next steps.",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Web",
+          "url": "https://rabbitholesolutions.ca/#tools",
+          "publisher": { "@id": "https://rabbitholesolutions.ca/#org" }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -88,7 +164,7 @@
                     <p>We also consult. Fractional CTO, architectural oversight, AI integration, corporate modernization — informed by years at the C-level building and securing platforms at scale.</p>
                 </div>
                 <aside class="about-aside">
-                    <img src="about-rabbit.png" alt="Rabbit Hole Solutions mascot" class="about-image">
+                    <img src="about-rabbit.webp" alt="Rabbit Hole Solutions mascot" class="about-image" width="656" height="768" loading="lazy">
                 </aside>
             </div>
         </div>
