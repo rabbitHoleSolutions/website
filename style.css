@@ -401,6 +401,20 @@ section {
     padding-right: 5rem;
 }
 
+/* Tiles for products that have their own page link through the heading.
+   Products without a page keep a plain heading, so the absence of a link
+   is itself the signal that there is nothing more to read yet. */
+.tool-name a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition-med);
+}
+
+.tool-name a:hover {
+    border-bottom-color: var(--color-text-muted);
+}
+
 .tool-desc {
     color: var(--color-text-muted);
     font-size: 0.95rem;
@@ -560,6 +574,199 @@ section {
 .tool-card:nth-child(5) { transition-delay: 0.4s; }
 .tool-card:nth-child(6) { transition-delay: 0.5s; }
 
+/* --- Product Pages --- */
+
+.page {
+    padding-top: calc(var(--space-xl) + 60px);
+    padding-bottom: var(--space-xl);
+}
+
+.breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.breadcrumb a:hover { color: var(--color-text-bright); }
+
+.product-head {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.product-head img {
+    width: 72px;
+    height: 72px;
+    flex: none;
+}
+
+.product-head img.tile {
+    border-radius: 14px;
+    border: 1px solid var(--color-border);
+}
+
+.product-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-sm);
+}
+
+.product-tagline {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 60ch;
+}
+
+/* Status pill — the tile badges are ::after content, which cannot be
+   reused here, so this is the standalone equivalent. */
+.pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: var(--space-sm);
+}
+
+.pill-shipped { color: #00b894; border: 1px solid rgba(0, 184, 148, 0.3); }
+.pill-beta    { color: #fdcb6e; border: 1px solid rgba(253, 203, 110, 0.3); }
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0 var(--space-xl);
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--color-border-hover);
+    border-radius: 4px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background var(--transition-med), border-color var(--transition-med);
+}
+
+.cta:hover { background: var(--color-bg-card-hover); border-color: var(--color-text-muted); }
+.cta-primary { background: var(--color-bg-card); border-color: var(--color-text-muted); color: var(--color-text-bright); }
+
+.prose {
+    max-width: 68ch;
+}
+
+.prose h2 {
+    font-size: 1.5rem;
+    margin: var(--space-xl) 0 var(--space-md);
+}
+
+.prose h3 {
+    font-size: 1.05rem;
+    margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.prose p { margin-bottom: var(--space-md); color: var(--color-text-muted); }
+.prose strong { color: var(--color-text); font-weight: 500; }
+
+.prose ul {
+    list-style: none;
+    margin-bottom: var(--space-md);
+}
+
+.prose ul li {
+    color: var(--color-text-muted);
+    padding-left: 1.3em;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.prose ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-border-hover);
+}
+
+figure {
+    margin: var(--space-lg) 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    display: block;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+    font-family: var(--font-mono);
+}
+
+.stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.stat {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: var(--space-md);
+    background: var(--color-bg-card);
+}
+
+.stat b {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--color-text-bright);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.stat span {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
+.spec {
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-lg);
+}
+
+.spec div {
+    display: flex;
+    gap: var(--space-md);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+}
+
+.spec dt {
+    flex: 0 0 30%;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+}
+
+.spec dd { color: var(--color-text); }
+
 /* --- Responsive --- */
 
 @media (min-width: 768px) {
@@ -625,4 +832,16 @@ section {
         display: inline-block;
         margin-bottom: var(--space-sm);
     }
+
+    .product-head {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .spec div {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .spec dt { flex: none; }
 }

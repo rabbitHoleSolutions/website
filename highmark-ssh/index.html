@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highmark SSH — a native SSH terminal for Meta Quest | Rabbit Hole Solutions</title>
+    <meta name="description" content="Highmark SSH is a full SSH terminal for Meta Quest headsets. VT-100 emulation, multi-tab sessions, hardware-backed encrypted credentials, and open source under MIT.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://rabbitholesolutions.ca/highmark-ssh/">
+
+    <meta property="og:site_name" content="Rabbit Hole Solutions Inc.">
+    <meta property="og:title" content="Highmark SSH — a native SSH terminal for Meta Quest">
+    <meta property="og:description" content="Highmark SSH is a full SSH terminal for Meta Quest headsets. VT-100 emulation, multi-tab sessions, hardware-backed encrypted credentials, and open source under MIT.">
+    <meta property="og:image" content="https://rabbitholesolutions.ca/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://rabbitholesolutions.ca/highmark-ssh/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Highmark SSH — a native SSH terminal for Meta Quest">
+    <meta name="twitter:description" content="Highmark SSH is a full SSH terminal for Meta Quest headsets. VT-100 emulation, multi-tab sessions, hardware-backed encrypted credentials, and open source under MIT.">
+    <meta name="twitter:image" content="https://rabbitholesolutions.ca/og-card.png">
+
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Highmark SSH",
+      "description": "A native SSH terminal emulator for Meta Quest headsets, with VT-100 emulation, multi-tab sessions and hardware-backed credential storage.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Meta Horizon OS",
+      "url": "https://rabbitholesolutions.ca/highmark-ssh/",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Rabbit Hole Solutions Inc.",
+            "url": "https://rabbitholesolutions.ca/"
+      },
+      "license": "https://github.com/rabbitHoleSolutions/highmark-ssh/blob/main/LICENSE"
+}
+    </script>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="nav-logo">
+            <img src="/inverted.png" alt="Rabbit Hole Solutions" width="32" height="37">
+        </a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#tools">Tools</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page">
+        <div class="container">
+            <p class="breadcrumb"><a href="/">Rabbit Hole Solutions</a> / Highmark SSH</p>
+
+            <div class="product-head">
+                <img src="/icons/highmark-ssh.png" alt="Highmark SSH icon" width="72" height="72">
+                <div>
+                    <span class="pill pill-shipped">Shipped</span>
+                    <h1 class="product-title">Highmark SSH</h1>
+                    <p class="product-tagline">A full SSH terminal for Meta Quest. Because sometimes you need to fix production from inside VR.</p>
+                </div>
+            </div>
+
+            <div class="cta-row">
+                <a href="https://www.meta.com/experiences/highmark-ssh/25701722399438079" class="cta cta-primary">Get it on the Meta Store</a>
+                <a href="https://github.com/rabbitHoleSolutions/highmark-ssh" class="cta">Source on GitHub</a>
+            </div>
+
+            <div class="prose">
+                <p>A real terminal, running natively on the headset. Not a remote desktop, not a browser tab pretending — an SSH client with proper VT-100 emulation, so <code>htop</code>, <code>vim</code> and <code>tmux</code> behave the way they do everywhere else.</p>
+                <p>It exists because the alternative was taking the headset off.</p>
+
+                <h2>What it does</h2>
+                <ul>
+                    <li><strong>Native SSH</strong> with full VT-100 compatible terminal emulation</li>
+                    <li><strong>Multi-tab sessions</strong> — several servers open at once</li>
+                    <li><strong>Connection history</strong> for the last eight hosts, plus starred favourites kept permanently</li>
+                    <li><strong>Paste <code>user@host:port</code></strong> and the fields fill themselves in</li>
+                    <li><strong>Controller scrolling</strong>, Quest keyboard integration and an edge-to-edge panel</li>
+                </ul>
+            </div>
+
+            <figure>
+                <img src="/img/highmark-1.webp" alt="Highmark SSH running btop on a remote server, displayed on a curved panel in VR" width="1600" height="1226" loading="lazy">
+                <figcaption>A live session over passthrough. The window title still reads QuestTerm — an older build.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <h2>Credentials and host keys</h2>
+                <p>Saved passwords are encrypted with <strong>AES-256-GCM via the Android Keystore</strong>, which is hardware-backed on Quest — the key material never leaves the secure element, and remembering a password is per-connection rather than all-or-nothing.</p>
+                <p>Host verification is trust-on-first-use: you're shown the fingerprint, you accept it, and if it ever changes afterwards you get warned rather than silently connected to something else.</p>
+
+                <p>Sessions are terminated properly on disconnect rather than left hanging, and each connection decides for itself whether its password is remembered — so a throwaway box and your production jump host don't have to be treated the same way.</p>
+
+                <h2>Open source</h2>
+                <p>The source is public and the app's own code is <strong>MIT licensed</strong>. The terminal emulation comes from the Termux project's <code>terminal-emulator</code> library, which is GPL v3, so that component carries its own terms — both are spelled out in the repository's LICENSE file.</p>
+                <p>If you'd rather build it yourself than buy it, that's the point of publishing it: clone the repository, build the APK, and sideload it over ADB with developer mode enabled on the headset. Buying it on the store just saves you the trouble and funds the next one.</p>
+
+                <h2>Requirements</h2>
+                <dl class="spec">
+                    <div><dt>Headset</dt><dd>Meta Quest 2, Quest Pro, Quest 3, Quest 3S</dd></div>
+                    <div><dt>Minimum OS</dt><dd>Android 10 (API 29)</dd></div>
+                    <div><dt>Display</dt><dd>2D panel mode, landscape</dd></div>
+                    <div><dt>Network</dt><dd>Required — it's an SSH client</dd></div>
+                </dl>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="/inverted.png" alt="" class="footer-logo" width="40" height="47">
+            <p class="footer-copy">&copy; 2026 Rabbit Hole Solutions Inc. &middot; New Westminster, BC</p>
+            <p class="footer-tagline">We like it down here.</p>
+        </div>
+    </footer>
+
+    <script>
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.getElementById('nav');
+        toggle.addEventListener('click', function() {
+            var open = nav.classList.toggle('nav--open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
+
+</body>
+</html>

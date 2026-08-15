@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tessera — a multi-stream media player for Meta Quest | Rabbit Hole Solutions</title>
+    <meta name="description" content="Tessera browses a whole video library as a wall of moving video on Meta Quest 3. Plays from SMB shares, USB drives and local storage, in a flat dock or freely placed screens.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://rabbitholesolutions.ca/tessera/">
+
+    <meta property="og:site_name" content="Rabbit Hole Solutions Inc.">
+    <meta property="og:title" content="Tessera — a multi-stream media player for Meta Quest">
+    <meta property="og:description" content="Tessera browses a whole video library as a wall of moving video on Meta Quest 3. Plays from SMB shares, USB drives and local storage, in a flat dock or freely placed screens.">
+    <meta property="og:image" content="https://rabbitholesolutions.ca/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://rabbitholesolutions.ca/tessera/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tessera — a multi-stream media player for Meta Quest">
+    <meta name="twitter:description" content="Tessera browses a whole video library as a wall of moving video on Meta Quest 3. Plays from SMB shares, USB drives and local storage, in a flat dock or freely placed screens.">
+    <meta name="twitter:image" content="https://rabbitholesolutions.ca/og-card.png">
+
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Tessera",
+      "description": "A multi-stream media player for Meta Quest 3 and 3S. A tiled library browser where many videos play at once, in a flat dock panel or an immersive scene.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Meta Horizon OS",
+      "url": "https://rabbitholesolutions.ca/tessera/",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Rabbit Hole Solutions Inc.",
+            "url": "https://rabbitholesolutions.ca/"
+      }
+}
+    </script>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="nav-logo">
+            <img src="/inverted.png" alt="Rabbit Hole Solutions" width="32" height="37">
+        </a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#tools">Tools</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page">
+        <div class="container">
+            <p class="breadcrumb"><a href="/">Rabbit Hole Solutions</a> / Tessera</p>
+
+            <div class="product-head">
+                <img src="/icons/tessera.png" alt="Tessera icon" class="tile" width="72" height="72">
+                <div>
+                    <span class="pill pill-beta">Beta</span>
+                    <h1 class="product-title">Tessera</h1>
+                    <p class="product-tagline">Browse a whole library as a wall of moving video. Not a grid of posters — a grid of things actually playing.</p>
+                </div>
+            </div>
+
+            <div class="cta-row">
+                <a href="mailto:hello@rabbitholesolutions.ca?subject=Tessera%20beta" class="cta cta-primary">Ask about the beta</a>
+            </div>
+
+            <div class="prose">
+                <p>Every media player shows you a wall of static cover art and makes you remember what's inside. Tessera shows you the films themselves, moving, all at once.</p>
+                <p>As many streams as the headset's decode budget allows play live; the rest hold their last decoded frame, so the wall stays full rather than going grey. When something has to be paused to make room, the player prefers a screen behind you over the one you're facing.</p>
+
+                <h2>Two ways to watch</h2>
+                <ul>
+                    <li><strong>Dock mode</strong> — one flat panel with an adaptive tiled grid, comfortable for browsing and for passthrough use</li>
+                    <li><strong>Immersive mode</strong> — screens placed freely in 3D space, any size, any position, over passthrough or a solid backdrop</li>
+                </ul>
+                <p>The switch between them preserves state, so you don't lose your place changing your mind.</p>
+            </div>
+
+            <figure>
+                <img src="/img/tessera-1.webp" alt="Dozens of videos playing simultaneously in a tiled grid in Tessera" width="1600" height="900" loading="lazy">
+                <figcaption>The defining trick — many streams live at once, not thumbnails.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <h2>The decode budget</h2>
+                <p>A headset can only hardware-decode so much video at once, and naive players fall over when you ask for more. Tessera treats that ceiling as the central problem rather than an afterthought.</p>
+                <p>A budget controller weighs each stream by throughput and codec, admits what fits, evicts what doesn't, and watches the decoder's own drop-rate counters to adapt its ceiling while you browse. Video is decoded exclusively by the hardware block — <strong>Tessera never implements decompression itself</strong>, so all the engineering goes into orchestration instead.</p>
+
+                <h2>Where your video lives</h2>
+                <ul>
+                    <li><strong>SMB / network shares</strong> — native SMB2/3 with fast seeking</li>
+                    <li><strong>USB drives</strong> — including NTFS and exFAT volumes Horizon OS won't mount itself</li>
+                    <li><strong>Local and OS-mounted storage</strong> via the standard file picker</li>
+                </ul>
+                <p>3D and VR formats are detected from the file's own metadata where present, with filename and aspect heuristics as a fallback, and a manual override when the file lies.</p>
+            </div>
+
+            <figure>
+                <img src="/img/tessera-2.webp" alt="Video screens placed freely around the room in Tessera's immersive mode" width="1600" height="900" loading="lazy">
+                <figcaption>Immersive mode — screens sized and placed wherever you want them.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="/img/tessera-3.webp" alt="Tessera's library browser listing files from a network share" width="1600" height="900" loading="lazy">
+                <figcaption>The library browser, reading straight off a network share.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <h2>Requirements</h2>
+                <dl class="spec">
+                    <div><dt>Headset</dt><dd>Meta Quest 3 or Quest 3S</dd></div>
+                    <div><dt>Not supported</dt><dd>Quest 2 — no AV1 hardware decode and a weaker decode budget</dd></div>
+                    <div><dt>Sources</dt><dd>SMB2/3 shares, USB mass storage, local files</dd></div>
+                    <div><dt>Status</dt><dd>In beta, shipping soon</dd></div>
+                </dl>
+
+                <p>Want in early, or have a library that breaks it? That's genuinely useful — <a href="mailto:hello@rabbitholesolutions.ca?subject=Tessera%20beta">hello@rabbitholesolutions.ca</a>.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="/inverted.png" alt="" class="footer-logo" width="40" height="47">
+            <p class="footer-copy">&copy; 2026 Rabbit Hole Solutions Inc. &middot; New Westminster, BC</p>
+            <p class="footer-tagline">We like it down here.</p>
+        </div>
+    </footer>
+
+    <script>
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.getElementById('nav');
+        toggle.addEventListener('click', function() {
+            var open = nav.classList.toggle('nav--open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
+
+</body>
+</html>

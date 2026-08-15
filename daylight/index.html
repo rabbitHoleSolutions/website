@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daylight — AI security auditing for Microsoft 365 | Rabbit Hole Solutions</title>
+    <meta name="description" content="Daylight audits your Microsoft 365 security event log every month, runs heuristics for common failure modes, and has an LLM write up each finding with harm, context and next steps.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://rabbitholesolutions.ca/daylight/">
+
+    <meta property="og:site_name" content="Rabbit Hole Solutions Inc.">
+    <meta property="og:title" content="Daylight — AI security auditing for Microsoft 365">
+    <meta property="og:description" content="Daylight audits your Microsoft 365 security event log every month, runs heuristics for common failure modes, and has an LLM write up each finding with harm, context and next steps.">
+    <meta property="og:image" content="https://rabbitholesolutions.ca/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://rabbitholesolutions.ca/daylight/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daylight — AI security auditing for Microsoft 365">
+    <meta name="twitter:description" content="Daylight audits your Microsoft 365 security event log every month, runs heuristics for common failure modes, and has an LLM write up each finding with harm, context and next steps.">
+    <meta name="twitter:image" content="https://rabbitholesolutions.ca/og-card.png">
+
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Daylight",
+      "description": "AI security auditing for Microsoft 365. Monthly security event logs run through heuristics, with each flagged case examined by an LLM and written up with potential harm, legitimate explanations and recommended next steps.",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "url": "https://rabbitholesolutions.ca/daylight/",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Rabbit Hole Solutions Inc.",
+            "url": "https://rabbitholesolutions.ca/"
+      }
+}
+    </script>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="nav-logo">
+            <img src="/inverted.png" alt="Rabbit Hole Solutions" width="32" height="37">
+        </a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#tools">Tools</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page">
+        <div class="container">
+            <p class="breadcrumb"><a href="/">Rabbit Hole Solutions</a> / Daylight</p>
+
+            <div class="product-head">
+                <img src="/icons/daylight.svg" alt="Daylight icon" width="72" height="72">
+                <div>
+                    <span class="pill pill-shipped">Shipped</span>
+                    <h1 class="product-title">Daylight</h1>
+                    <p class="product-tagline">AI security auditing for Microsoft 365. The month's events, read properly, and written up like an analyst would.</p>
+                </div>
+            </div>
+
+            <div class="cta-row">
+                <a href="mailto:hello@rabbitholesolutions.ca?subject=Daylight" class="cta cta-primary">Get in touch</a>
+            </div>
+
+            <div class="prose">
+                <p>Every tenant produces a security event log nobody reads. It's enormous, it's mostly noise, and the interesting parts look exactly like the boring parts until someone sits down and works through them.</p>
+                <p>Daylight does that work every month.</p>
+
+                <h2>How the audit works</h2>
+                <ul>
+                    <li><strong>Pull</strong> — the month's security event log is collected from your tenant</li>
+                    <li><strong>Triage</strong> — heuristics flag the failure modes that actually matter, and the noise stays in the log</li>
+                    <li><strong>Examine</strong> — each flagged case goes to an LLM with its surrounding context, not as a lone log line</li>
+                    <li><strong>Report</strong> — findings are written up in plain language and assembled into a single document</li>
+                </ul>
+
+                <h2>What gets checked</h2>
+                <p>The heuristics target the events that precede real incidents — the quiet administrative changes rather than the loud ones:</p>
+                <ul>
+                    <li><strong>Consent to applications</strong> and delegated permission grants</li>
+                    <li><strong>App role assignments</strong> handed to users</li>
+                    <li><strong>Privileged role assignment</strong> and additions to role membership</li>
+                    <li><strong>Service principal credentials</strong> being added</li>
+                    <li><strong>Strong authentication disabled</strong> on an account</li>
+                    <li><strong>Mailbox forwarding</strong> quietly configured</li>
+                    <li><strong>Outliers versus peers</strong> — accounts behaving unlike others in the same role</li>
+                </ul>
+
+                <h2>What a finding actually says</h2>
+                <p>This is the part that matters, and it's what separates a report from an alert queue. Every finding covers three things:</p>
+                <ul>
+                    <li><strong>The potential harm</strong> — what an attacker could do with this, concretely</li>
+                    <li><strong>Why it might be fine</strong> — the legitimate explanation, if there is one, so you aren't chasing your own IT department's normal Tuesday</li>
+                    <li><strong>What to do next</strong> — the actual next step, not "review this event"</li>
+                </ul>
+                <p>Anything can raise an alert. The work is deciding which alerts are real and saying so in language a director can act on.</p>
+
+                <h2>Integrations</h2>
+                <dl class="spec">
+                    <div><dt>Available now</dt><dd>Microsoft 365 / Entra ID</dd></div>
+                    <div><dt>Next</dt><dd>Google Cloud</dd></div>
+                    <div><dt>Cadence</dt><dd>Monthly audit cycle</dd></div>
+                    <div><dt>Deployment</dt><dd>Hosted or on-premises</dd></div>
+                </dl>
+
+                <h2>It also indexes your documents</h2>
+                <p>Daylight carries a full document intelligence layer: OCR across scanned files and images, keyword and semantic search, and cited answers to plain-language questions across everything it has ingested.</p>
+                <p>It's genuinely useful, and it is not the reason to buy this. The audit is.</p>
+
+                <p><a href="mailto:hello@rabbitholesolutions.ca?subject=Daylight">hello@rabbitholesolutions.ca</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="/inverted.png" alt="" class="footer-logo" width="40" height="47">
+            <p class="footer-copy">&copy; 2026 Rabbit Hole Solutions Inc. &middot; New Westminster, BC</p>
+            <p class="footer-tagline">We like it down here.</p>
+        </div>
+    </footer>
+
+    <script>
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.getElementById('nav');
+        toggle.addEventListener('click', function() {
+            var open = nav.classList.toggle('nav--open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
+
+</body>
+</html>
