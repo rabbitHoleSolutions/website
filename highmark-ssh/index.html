@@ -98,8 +98,23 @@
             </div>
 
             <figure>
-                <img src="/img/highmark-1.webp" alt="Highmark SSH running btop on a remote server, displayed on a curved panel in VR" width="1600" height="1226" loading="lazy">
-                <figcaption>A live session over passthrough. The window title still reads QuestTerm — an older build.</figcaption>
+                <img src="/img/highmark-1.webp" alt="The Highmark SSH quick connect dialog, with saved connections and a host key prompt" width="1440" height="810" loading="lazy">
+                <figcaption>Quick Connect — saved hosts, starred favourites, per-connection password memory.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="/img/highmark-2.webp" alt="btop running full screen in Highmark SSH, showing CPU, memory, disk and network panels" width="1440" height="810" loading="lazy">
+                <figcaption>btop over SSH. Full colour, full width, redrawing at speed.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <h2>A real terminal, not an approximation</h2>
+                <p>The emulation is the Termux project's, which is the same engine behind the most-used terminal on Android. Curses applications, 256-colour output, alternate screen buffers, mouse reporting and tmux splits all behave as they should — the failure mode of lesser clients is that <code>vim</code> looks fine until something redraws.</p>
+            </div>
+
+            <figure>
+                <img src="/img/highmark-3.webp" alt="A tmux session in Highmark SSH split into four panes running different terminal applications" width="1440" height="810" loading="lazy">
+                <figcaption>Four tmux panes at once — the emulation holds up under exactly the sort of thing that breaks it.</figcaption>
             </figure>
 
             <div class="prose">
