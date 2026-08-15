@@ -114,8 +114,8 @@
             <span></span>
         </button>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
             <li><a href="#tools">Tools</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -150,23 +150,6 @@
             <h1 class="hero-title">Rabbit Hole Solutions</h1>
             <p class="hero-tagline">We like it down here.</p>
             <a href="#tools" class="hero-cta">See what we're building</a>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Down the Rabbit Hole</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Rabbit Hole Solutions is an indie studio that builds things that actually matter to us.</p>
-                    <p>We make niche tools for deep nerd communities. VR productivity apps. AI image curation utilities. Developer tools. Games.</p>
-                    <p>We also <a href="/consulting/">consult</a>. Fractional CTO, architectural oversight, AI integration, corporate modernization — informed by years at the C-level building and securing platforms at scale.</p>
-                </div>
-                <aside class="about-aside">
-                    <img src="about-rabbit.webp" alt="Rabbit Hole Solutions mascot" class="about-image" width="656" height="768" loading="lazy">
-                </aside>
-            </div>
         </div>
     </section>
 
@@ -329,6 +312,36 @@
         </div>
     </section>
 
+    <!-- CONSULTING -->
+    <section id="consulting" class="consulting">
+        <div class="container">
+            <hr class="soft-rule">
+            <article class="consult-card">
+                <p class="consult-eyebrow">Also available</p>
+                <h2 class="consult-title">Consulting &amp; fractional CTO</h2>
+                <p class="consult-desc">Architectural oversight, AI integration, corporate modernization and security posture &mdash; from someone who held the CTO and CISO roles at scale and still ships software.</p>
+                <a href="/consulting/" class="cta cta-primary">How engagements work</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Down the Rabbit Hole</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Rabbit Hole Solutions is an indie studio that builds things that actually matter to us.</p>
+                    <p>We make niche tools for deep nerd communities. VR productivity apps. AI image curation utilities. Developer tools. Games.</p>
+                    <p>We also <a href="/consulting/">consult</a>. Fractional CTO, architectural oversight, AI integration, corporate modernization — informed by years at the C-level building and securing platforms at scale.</p>
+                </div>
+                <aside class="about-aside">
+                    <img src="about-rabbit.webp" alt="Rabbit Hole Solutions mascot" class="about-image" width="656" height="768" loading="lazy">
+                </aside>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="contact">
         <div class="container">
@@ -394,7 +407,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.tool-card, .about-content, .section-title, .contact-methods').forEach(function(el) {
+        document.querySelectorAll('.tool-card, .about-content, .section-title, .consult-card, .contact-methods').forEach(function(el) {
             observer.observe(el);
         });
     </script>

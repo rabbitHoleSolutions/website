@@ -470,6 +470,59 @@ section {
     border-color: var(--color-text-bright);
 }
 
+/* --- Consulting callout --- */
+
+/* Sits between the product grid and the about copy, deliberately not
+   shaped like a tool card — consulting is a different offer to a
+   different buyer, and should not read as the eighth product. */
+.consulting {
+    padding: 0 0 var(--space-2xl);
+}
+
+.soft-rule {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+    margin: 0 0 var(--space-2xl);
+}
+
+.consult-card {
+    max-width: 660px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-bg-card);
+    transition: border-color var(--transition-med), background var(--transition-med);
+}
+
+.consult-card:hover {
+    border-color: var(--color-border-hover);
+    background: var(--color-bg-card-hover);
+}
+
+.consult-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.consult-title {
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    margin-bottom: var(--space-md);
+}
+
+.consult-desc {
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+    margin: 0 auto var(--space-lg);
+    max-width: 52ch;
+}
+
 /* --- Contact --- */
 
 .contact {
@@ -553,6 +606,7 @@ section {
 .tool-card,
 .about-content,
 .section-title,
+.consult-card,
 .contact-methods {
     opacity: 0;
     transform: translateY(20px);
@@ -562,6 +616,7 @@ section {
 .tool-card.visible,
 .about-content.visible,
 .section-title.visible,
+.consult-card.visible,
 .contact-methods.visible {
     opacity: 1;
     transform: translateY(0);
