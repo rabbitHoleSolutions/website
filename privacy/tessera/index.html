@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tessera Privacy Policy — Rabbit Hole Solutions Inc.</title>
+    <meta name="description" content="Privacy policy for Tessera, a multi-stream media player for Meta Quest. Tessera collects no data and connects only to the servers you configure yourself.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://rabbitholesolutions.ca/privacy/tessera/">
+
+    <meta property="og:site_name" content="Rabbit Hole Solutions Inc.">
+    <meta property="og:title" content="Tessera Privacy Policy">
+    <meta property="og:description" content="Tessera collects no data and connects only to the servers you configure yourself.">
+    <meta property="og:image" content="https://rabbitholesolutions.ca/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://rabbitholesolutions.ca/privacy/tessera/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tessera Privacy Policy">
+    <meta name="twitter:description" content="Tessera collects no data and connects only to the servers you configure yourself.">
+    <meta name="twitter:image" content="https://rabbitholesolutions.ca/og-card.png">
+
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Long-form legal text. The main page has no prose layout of its own,
+           so this page brings a narrow measure and readable rhythm with it,
+           reusing the site's variables so it stays in step with the theme. */
+        .legal { padding: 8rem 0 4rem; }
+        .legal .container { max-width: 46rem; }
+        .legal h1 { font-size: clamp(2rem, 5vw, 2.75rem); margin-bottom: 0.5rem; }
+        .legal .legal-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
+                             opacity: 0.6; margin-bottom: 3rem; }
+        .legal h2 { font-size: 1.25rem; margin: 2.5rem 0 0.75rem; }
+        .legal p, .legal li { line-height: 1.7; opacity: 0.85; }
+        .legal p { margin-bottom: 1rem; }
+        .legal ul { margin: 0 0 1rem 1.25rem; }
+        .legal li { margin-bottom: 0.5rem; }
+        .legal strong { opacity: 1; }
+        .legal .back { display: inline-block; margin-bottom: 2rem;
+                       font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="nav-logo">
+            <img src="/inverted.png" alt="Rabbit Hole Solutions" width="32" height="37">
+        </a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#tools">Tools</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="legal">
+        <div class="container">
+            <a href="/" class="back">&larr; rabbitholesolutions.ca</a>
+
+            <h1>Privacy Policy</h1>
+            <p class="legal-meta">
+                Tessera &middot; Rabbit Hole Solutions Inc. &middot; Last updated: September 4, 2026
+            </p>
+
+            <h2>Overview</h2>
+            <p>Tessera is a multi-stream media player for Meta Quest headsets. It plays
+               video from your own headset, USB drives, and network servers you configure
+               yourself. This policy explains what data the app handles and how it is
+               used.</p>
+
+            <h2>Data Collection</h2>
+            <p>Tessera does <strong>not</strong> collect, transmit, or share any personal
+               data. The app:</p>
+            <ul>
+                <li>Does not collect analytics or telemetry</li>
+                <li>Does not track usage or behaviour</li>
+                <li>Does not require an account with us, or any registration</li>
+                <li>Does not use advertising or third-party SDKs that collect data</li>
+            </ul>
+
+            <h2>Network Activity</h2>
+            <p>Unlike a purely offline app, Tessera does have network access — it has to,
+               in order to play video off a NAS or a media server. What matters is
+               <strong>where it connects</strong>, and the answer is: only where you tell
+               it to.</p>
+            <ul>
+                <li>Tessera connects <strong>only</strong> to the SMB shares, Jellyfin
+                    servers, and Plex servers whose addresses you enter yourself, and to
+                    nothing else.</li>
+                <li>There is no Rabbit Hole Solutions server. We operate no backend, so no
+                    usage data, media titles, addresses or credentials reach us — there is
+                    nowhere for them to go.</li>
+                <li>Video is always played <strong>directly from your own server</strong>,
+                    never relayed through a third party and never transcoded remotely.</li>
+                <li>The one exception you may opt into is Plex sign-in: if you choose to
+                    link a Plex account rather than paste a token, the app contacts Plex's
+                    own service (<code>plex.tv</code>) to complete that sign-in and to list
+                    the servers on your account. That is a connection to Plex, governed by
+                    Plex's privacy policy, and it happens only if you use that button.</li>
+            </ul>
+
+            <h2>Your Media</h2>
+            <p>Tessera reads video files in order to play them. It does not upload, copy,
+               index to any remote service, or report on your media in any way. Titles,
+               filenames, thumbnails and playback positions stay on the headset.</p>
+            <p>The app can delete a file from a source that permits it — that action is
+               taken only when you ask for it, it asks for confirmation first, and it
+               cannot be undone.</p>
+
+            <h2>Camera and Passthrough</h2>
+            <p>Tessera can place video screens over a view of your room using Meta's
+               passthrough feature. That view is composited by the headset's own system
+               software. <strong>The app never receives, processes, or stores camera
+               images.</strong></p>
+
+            <h2>USB Drives</h2>
+            <p>If you connect a USB drive, Tessera reads it in order to list and play the
+               video on it. Drives are read-only in the app's direct-USB mode. Nothing
+               about the drive or its contents is transmitted off the headset.</p>
+
+            <h2>Data Stored on Your Device</h2>
+            <p>Tessera stores the following <strong>locally on your device only</strong>,
+               in the app's private storage:</p>
+            <ul>
+                <li><strong>Sources you add</strong> — the address of each local folder,
+                    SMB share, Jellyfin server or Plex server, so they are still there next
+                    launch</li>
+                <li><strong>Credentials for those sources</strong> — the username, password
+                    or access token you entered, kept so the app can reconnect without
+                    asking you each time. These are stored on the headset in the app's
+                    private storage and are never transmitted anywhere except to the server
+                    they belong to.</li>
+                <li><strong>Playback preferences</strong> — buffer size, maximum
+                    simultaneous streams, and any manual VR/3D format overrides you have
+                    set for particular files</li>
+                <li><strong>Recent searches</strong> and thumbnail images generated from
+                    your own media</li>
+            </ul>
+            <p>The five bundled sample videos (Blender Foundation open movies, CC-BY) are
+               copied on first launch into <code>Movies/Tessera Samples</code> in your
+               headset's shared storage so they appear in your video library.</p>
+            <p>This data never leaves your device and is not accessible to Rabbit Hole
+               Solutions Inc. or any third party.</p>
+
+            <h2>Data Deletion</h2>
+            <p>All data created by Tessera resides locally on your device. You can delete
+               it at any time by:</p>
+            <ul>
+                <li><strong>Within the app</strong> — remove a source from the Library tab,
+                    which deletes its stored address and credentials</li>
+                <li><strong>Clearing app data</strong> — Settings &gt; Apps &gt; Tessera
+                    &gt; Clear Data, which removes every source, credential, preference and
+                    cached thumbnail</li>
+                <li><strong>Uninstalling the app</strong> — removes all app-private data
+                    completely</li>
+            </ul>
+            <p>Note that the bundled sample videos copied to
+               <code>Movies/Tessera Samples</code> are ordinary files in your headset's
+               shared storage and are <strong>not</strong> removed when the app is
+               uninstalled; delete them separately if you want them gone.</p>
+            <p>No data is stored remotely, so there is nothing to request deletion of from
+               our servers.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>Tessera does not knowingly collect any data from children under the age
+               of 13.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>If this privacy policy is updated, the revised version will be posted at this
+               URL with an updated date. As the app does not collect contact information,
+               users are encouraged to check this page periodically.</p>
+
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: <a href="mailto:hello@rabbitholesolutions.ca">hello@rabbitholesolutions.ca</a></li>
+                <li>Web: <a href="https://rabbitholesolutions.ca">rabbitholesolutions.ca</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="/inverted.png" alt="" class="footer-logo" width="40" height="47">
+            <p class="footer-copy">&copy; 2026 Rabbit Hole Solutions Inc. &middot; New Westminster, BC</p>
+            <p class="footer-tagline">We like it down here.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Below 768px the stylesheet parks .nav-links off-canvas and only
+        // .nav--open brings them back, so the toggle is required for the menu
+        // to be reachable at all on a phone.
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.getElementById('nav');
+        toggle.addEventListener('click', function() {
+            var open = nav.classList.toggle('nav--open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
+
+</body>
+</html>
