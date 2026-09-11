@@ -669,6 +669,15 @@ section {
     border: 1px solid var(--color-border);
 }
 
+/* Wide brand art above the product head. It is drawn onto the page's own
+   black and fades out at its edges, so unlike a screenshot it gets no frame. */
+.product-hero {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--space-lg);
+}
+
 .product-title {
     font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.1;
@@ -891,6 +900,17 @@ figcaption {
     .product-head {
         flex-direction: column;
         gap: var(--space-md);
+    }
+
+    /* Full width leaves the mark tiny on a phone. Crop the fading field at
+       the sides instead; the mark is centred, so it survives whole. The crop
+       lands inside the field's fade, so the mask puts the soft edges back. */
+    .product-hero {
+        aspect-ratio: 2 / 1;
+        max-height: 240px;
+        object-fit: cover;
+        -webkit-mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
+        mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
     }
 
     .spec div {
