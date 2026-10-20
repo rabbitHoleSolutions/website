@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>openTessera — a desktop video wall for Linux and macOS | Rabbit Hole Solutions</title>
-    <meta name="description" content="openTessera plays many videos at once, tiled across one window or every monitor you have. Local files, Plex, Jellyfin and live security cameras in one queue. Free and open source, for Linux and macOS. An early release.">
+    <title>openTessera — a video player and video wall for Linux and macOS | Rabbit Hole Solutions</title>
+    <meta name="description" content="openTessera is a video player for Linux and macOS: double-click a file and it plays, with a queue of what's next. When you want more, it plays many videos at once, tiled across one window or every monitor. Local files, Plex, Jellyfin and live security cameras. Free and open source. An early release.">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://rabbitholesolutions.ca/opentessera/">
 
     <meta property="og:site_name" content="Rabbit Hole Solutions Inc.">
-    <meta property="og:title" content="openTessera — a desktop video wall for Linux and macOS">
-    <meta property="og:description" content="Many videos at once, tiled across one window or every monitor. Local files, Plex, Jellyfin and live security cameras in one queue. Free and open source. An early release — feedback wanted.">
+    <meta property="og:title" content="openTessera — a video player and video wall for Linux and macOS">
+    <meta property="og:description" content="A video player for Linux and macOS that also does a wall of videos. Play one file like any player, or many at once across every monitor. Local files, Plex, Jellyfin and live cameras. Free and open source. An early release — feedback wanted.">
     <meta property="og:image" content="https://rabbitholesolutions.ca/img/opentessera-og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -19,8 +19,8 @@
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="openTessera — a desktop video wall for Linux and macOS">
-    <meta name="twitter:description" content="Many videos at once, tiled across one window or every monitor. Local files, Plex, Jellyfin and live security cameras in one queue. Free and open source. An early release — feedback wanted.">
+    <meta name="twitter:title" content="openTessera — a video player and video wall for Linux and macOS">
+    <meta name="twitter:description" content="A video player for Linux and macOS that also does a wall of videos. Play one file like any player, or many at once across every monitor. Local files, Plex, Jellyfin and live cameras. Free and open source. An early release — feedback wanted.">
     <meta name="twitter:image" content="https://rabbitholesolutions.ca/img/opentessera-og.jpg">
 
     <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
@@ -37,7 +37,7 @@
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "openTessera",
-      "description": "A desktop video wall: many videos playing at once, tiled across one window or every monitor. Local files, Plex, Jellyfin and live security cameras in one shared queue. Free and open source (GPL-3.0).",
+      "description": "A video player for Linux and macOS that plays one video like any other player, or many at once as a wall across one window or every monitor. Local files, Plex, Jellyfin and live security cameras in one shared queue. Free and open source (GPL-3.0).",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Linux, macOS",
       "softwareVersion": "0.2.0",
@@ -80,7 +80,7 @@
                 <div>
                     <span class="pill pill-beta">Early release · v0.2</span>
                     <h1 class="product-title">openTessera</h1>
-                    <p class="product-tagline">A video wall for your desktop. Many videos playing at once — across one window, or every monitor you own.</p>
+                    <p class="product-tagline">A video player for Linux and macOS. Double-click a film and watch it — or put a whole wall of them on every monitor you own.</p>
                 </div>
             </div>
 
@@ -96,12 +96,32 @@
             </div>
 
             <figure>
-                <img src="/img/opentessera-1.webp" alt="Nine films playing at once in one openTessera window, in a three-by-three grid" width="1600" height="900" fetchpriority="high">
-                <figcaption>Nine streams in one window. Every tile is playing, not a poster. (The films are fakes — AI-generated frames made for testing players.)</figcaption>
+                <img src="/img/opentessera-3.webp" alt="One film playing in an openTessera window, with its playback controls at the top and the queue as a strip of thumbnails along the bottom" width="1600" height="900" fetchpriority="high">
+                <figcaption>Just a video player: one film, its controls, and what's up next as thumbnails along the bottom. (The films are fakes — AI-generated frames made for testing players.)</figcaption>
             </figure>
 
             <div class="prose">
-                <p>openTessera is the desktop sibling of <a href="/tessera/">Tessera</a>, the Quest app: the same idea — a library you see moving rather than as cover art — rebuilt from scratch for Linux and macOS. It's free and open source under the GPL, written in Rust on top of libmpv, the engine inside mpv.</p>
+                <h2>First, it's a video player</h2>
+                <p>Most of the time you just want to watch something, and openTessera is happy to be that player. Double-click a video and it plays in an ordinary window, using the same engine as mpv — so it plays practically anything, decoded on your GPU.</p>
+                <ul>
+                    <li><strong>The usual controls.</strong> Click to pause, arrow keys to skip back and forward (hold to scan), the scroll wheel for volume, <strong>W</strong> for fullscreen.</li>
+                    <li><strong>A queue you can see.</strong> Add films, episodes or whole folders from the library window and they line up behind what's playing. Move the mouse and they show as thumbnails along the bottom; <strong>N</strong> plays the next one. Reorder, shuffle or sort it in the queue tab.</li>
+                    <li><strong>Your library, wherever it is.</strong> Local folders, Plex and Jellyfin, browsable in the library window — not just whatever file you double-clicked.</li>
+                    <li><strong>Picture-in-picture.</strong> <strong>T</strong> floats the window above everything else with no title bar, so a film can sit in a corner while you work.</li>
+                    <li><strong>Your default player, if you like.</strong> It appears under <em>Open With</em> for video files, and can take over as the default.</li>
+                </ul>
+
+                <h2>Then, if you want, a wall</h2>
+                <p>Press <strong>+</strong> and a second video plays beside the first. Keep going and you have a wall: as many as your GPU can decode, filling one window or every monitor at once.</p>
+            </div>
+
+            <figure>
+                <img src="/img/opentessera-1.webp" alt="Nine films playing at once in one openTessera window, in a three-by-three grid" width="1600" height="900" loading="lazy">
+                <figcaption>Nine streams in one window. Every tile is playing, not a poster.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <p>That's where the name comes from: openTessera is the desktop sibling of <a href="/tessera/">Tessera</a>, the Quest app, rebuilt from scratch for Linux and macOS. It's free and open source under the GPL, written in Rust on top of libmpv, the engine inside mpv.</p>
                 <p>Every tile is its own player decoding on the GPU, so a wall is cheap: on an NVIDIA RTX 5080, twelve 4K streams play in real time on about 2.4% of the CPU.</p>
 
                 <h2>Pin one, keep the rest</h2>
