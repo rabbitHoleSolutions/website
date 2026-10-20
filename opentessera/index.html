@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>openTessera — a desktop video wall for Linux and macOS | Rabbit Hole Solutions</title>
+    <meta name="description" content="openTessera plays many videos at once, tiled across one window or every monitor you have. Local files, Plex, Jellyfin and live security cameras in one queue. Free and open source, for Linux and macOS. An early release.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://rabbitholesolutions.ca/opentessera/">
+
+    <meta property="og:site_name" content="Rabbit Hole Solutions Inc.">
+    <meta property="og:title" content="openTessera — a desktop video wall for Linux and macOS">
+    <meta property="og:description" content="Many videos at once, tiled across one window or every monitor. Local files, Plex, Jellyfin and live security cameras in one queue. Free and open source. An early release — feedback wanted.">
+    <meta property="og:image" content="https://rabbitholesolutions.ca/img/opentessera-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Nine films playing at once in an openTessera window.">
+    <meta property="og:url" content="https://rabbitholesolutions.ca/opentessera/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="openTessera — a desktop video wall for Linux and macOS">
+    <meta name="twitter:description" content="Many videos at once, tiled across one window or every monitor. Local files, Plex, Jellyfin and live security cameras in one queue. Free and open source. An early release — feedback wanted.">
+    <meta name="twitter:image" content="https://rabbitholesolutions.ca/img/opentessera-og.jpg">
+
+    <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "openTessera",
+      "description": "A desktop video wall: many videos playing at once, tiled across one window or every monitor. Local files, Plex, Jellyfin and live security cameras in one shared queue. Free and open source (GPL-3.0).",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Linux, macOS",
+      "softwareVersion": "0.2.0",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+      "downloadUrl": "https://github.com/rabbitHoleSolutions/openTessera/releases/latest",
+      "codeRepository": "https://github.com/rabbitHoleSolutions/openTessera",
+      "url": "https://rabbitholesolutions.ca/opentessera/",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Rabbit Hole Solutions Inc.",
+            "url": "https://rabbitholesolutions.ca/"
+      }
+}
+    </script>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <a href="/" class="nav-logo">
+            <img src="/inverted.png" alt="Rabbit Hole Solutions" width="32" height="37">
+        </a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/#tools">Tools</a></li>
+            <li><a href="/consulting/">Consulting</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page">
+        <div class="container">
+            <p class="breadcrumb"><a href="/">Rabbit Hole Solutions</a> / openTessera</p>
+
+            <div class="product-head">
+                <img src="/icons/opentessera.png" alt="openTessera icon" class="tile" width="72" height="72">
+                <div>
+                    <span class="pill pill-beta">Early release · v0.2</span>
+                    <h1 class="product-title">openTessera</h1>
+                    <p class="product-tagline">A video wall for your desktop. Many videos playing at once — across one window, or every monitor you own.</p>
+                </div>
+            </div>
+
+            <div class="cta-row">
+                <a href="https://github.com/rabbitHoleSolutions/openTessera/releases/latest" class="cta cta-primary">Download for Mac</a>
+                <a href="https://github.com/rabbitHoleSolutions/openTessera" class="cta">Source on GitHub</a>
+                <a href="https://github.com/rabbitHoleSolutions/openTessera/issues/new/choose" class="cta">Report how it went</a>
+            </div>
+
+            <div class="notice">
+                <p><strong>This is v0.2, not 1.0.</strong> I use it every day on one Linux machine, and it has been tried on a couple of Macs. That's the whole test lab. It's being shared now to find out how it does everywhere else — other distributions, desktops, GPUs and Macs.</p>
+                <p>Expect rough edges. A report that says "works fine on my setup" is as useful as a bug report, and ideas are welcome too. <a href="https://github.com/rabbitHoleSolutions/openTessera/issues">GitHub issues</a> or <a href="mailto:hello@rabbitholesolutions.ca?subject=openTessera">email</a>, whichever you prefer.</p>
+            </div>
+
+            <figure>
+                <img src="/img/opentessera-1.webp" alt="Nine films playing at once in one openTessera window, in a three-by-three grid" width="1600" height="900" fetchpriority="high">
+                <figcaption>Nine streams in one window. Every tile is playing, not a poster. (The films are fakes — AI-generated frames made for testing players.)</figcaption>
+            </figure>
+
+            <div class="prose">
+                <p>openTessera is the desktop sibling of <a href="/tessera/">Tessera</a>, the Quest app: the same idea — a library you see moving rather than as cover art — rebuilt from scratch for Linux and macOS. It's free and open source under the GPL, written in Rust on top of libmpv, the engine inside mpv.</p>
+                <p>Every tile is its own player decoding on the GPU, so a wall is cheap: on an NVIDIA RTX 5080, twelve 4K streams play in real time on about 2.4% of the CPU.</p>
+
+                <h2>Pin one, keep the rest</h2>
+                <p>A grid treats every video as equal, and usually one isn't. Press <strong>P</strong> over a tile — or its pin button — and it takes most of the window while the others shrink into a strip underneath, still playing. You watch one properly and keep an eye on the rest.</p>
+                <ul>
+                    <li><strong>The sound follows the pin.</strong> If anything is playing audio, pinning a tile gives it the sound and mutes the others. If everything was muted, it stays muted — pinning is no reason to start making noise. (A setting, on by default.)</li>
+                    <li><strong>Swap what's featured</strong> by dragging a tile from the strip onto the big one. Press P again to go back to the grid.</li>
+                    <li><strong>F zooms a tile to fill its window</strong> outright, for when the strip is a distraction. Sound follows that too.</li>
+                </ul>
+            </div>
+
+            <figure>
+                <img src="/img/opentessera-2.webp" alt="Four tiles in an openTessera window: one pinned large at the top with its controls showing, three smaller ones in a strip beneath it" width="1600" height="900" loading="lazy">
+                <figcaption>Four tiles, one pinned. The pin button is lit in the pinned tile's controls; the other three keep playing below.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <h2>Windows and walls</h2>
+                <ul>
+                    <li><strong>It starts as one ordinary window.</strong> Open more whenever you like, and drag a tile from one window to another.</li>
+                    <li><strong>W</strong> turns a window into a fullscreen wall on whatever monitor it's on. Start it with <code>--max</code> and it fills every monitor at once.</li>
+                    <li><strong>T</strong> floats a window above everything else with no title bar — picture-in-picture for the one thing you want to keep watching while you work.</li>
+                    <li>The controls shrink with their tile, so a twelve-tile wall isn't buried under buttons, and each monitor remembers its own UI scale.</li>
+                </ul>
+
+                <h2>The decode budget</h2>
+                <p>A GPU can only decode so much at once. openTessera doesn't pretend otherwise: each new stream is admitted against a decode ceiling, weighted by resolution, frame rate and codec. When the wall is full, the oldest stream pauses to make room rather than everything stuttering, and the ceiling lowers itself if decoders start dropping frames.</p>
+
+                <h2>Where your video lives</h2>
+                <p>Everything feeds one shared queue, and every tile is a slot that plays from it. Build the queue from the library browser, then reorder, shuffle or sort it.</p>
+                <ul>
+                    <li><strong>Folders</strong> — local disks, or a network share once it's mounted</li>
+                    <li><strong>Plex</strong> — link through plex.tv with the on-screen code; no token to dig out</li>
+                    <li><strong>Jellyfin</strong> — servers on your network are found for you; sign in once with your username and password, which are swapped for a token and never stored</li>
+                    <li><strong>http(s) URLs</strong> — anything mpv can open</li>
+                </ul>
+                <p>Plex and Jellyfin play the original file through the server's direct-play endpoint. Nothing is transcoded, and seeking works the way it does for a local file.</p>
+
+                <h2>Security cameras</h2>
+                <p>A camera is a stream URL — RTSP, RTSPS and the like — so it goes in the queue like any film, and a wall of cameras is just a wall. Live streams are played differently from files on purpose: no big read-ahead cache (that's latency, not resilience, on something you can't seek), no looping, nothing to delete.</p>
+                <p>Ubiquiti cameras are found on your network with a scan. UniFi Protect is tested, with G4 Dome and G6 Turret cameras streaming through the controller. Other brands should work if mpv can open their stream; I haven't been able to test them, so a report from your setup would help.</p>
+
+                <h2>An assistant can drive it</h2>
+                <p><code>tessera mcp</code> is an <a href="https://modelcontextprotocol.io">MCP</a> server, so an AI assistant can work the player for you: ask what's playing, pause or seek a tile, change the volume, search a film's subtitles for a line and jump to it, crop the black bars off, or look at the current frame. It talks to the running app over a local socket — no network port, no token — can only open media from your configured folders and <code>~/Videos</code>, and has no way to delete anything.</p>
+
+                <h2>Built with AI, and saying so</h2>
+                <p>Most of openTessera's code and documentation were written by Claude, Anthropic's model, working in Claude Code. I directed the design, tested it on real hardware, and decided what shipped. The repository says so too, and its notes and roadmap record why each thing was built the way it was.</p>
+
+                <h2>Requirements</h2>
+                <dl class="spec">
+                    <div><dt>Version</dt><dd>0.2.0 — an early release, not 1.0</dd></div>
+                    <div><dt>macOS</dt><dd>Apple Silicon, macOS 15 or newer. The download includes everything it needs. It isn't signed by Apple yet, so macOS asks you to approve it once — the <a href="https://github.com/rabbitHoleSolutions/openTessera/releases/latest">release notes</a> say how.</dd></div>
+                    <div><dt>Linux</dt><dd>Built from source (<a href="https://github.com/rabbitHoleSolutions/openTessera#build-and-install">one command</a>) with your distribution's libmpv. Tested on Pop!_OS under X11 with an NVIDIA GPU; other distributions, Wayland, AMD and Intel are untested so far.</dd></div>
+                    <div><dt>Windows</dt><dd>Not supported, and no plans</dd></div>
+                    <div><dt>Sources</dt><dd>Local and mounted folders, Plex, Jellyfin, RTSP/RTSPS cameras, http(s) URLs</dd></div>
+                    <div><dt>Licence</dt><dd>GPL-3.0-or-later. Free, no account, no telemetry.</dd></div>
+                </dl>
+
+                <h2>Talk to me</h2>
+                <p>One developer, and I read everything. Tell me what your setup is and how it went — <a href="https://github.com/rabbitHoleSolutions/openTessera/issues/new/choose">open an issue</a> (the template asks for what helps) or write to <a href="mailto:hello@rabbitholesolutions.ca?subject=openTessera">hello@rabbitholesolutions.ca</a>.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="/inverted.png" alt="" class="footer-logo" width="40" height="47">
+            <p class="footer-copy">&copy; 2026 Rabbit Hole Solutions Inc. &middot; New Westminster, BC</p>
+            <p class="footer-tagline">We like it down here.</p>
+        </div>
+    </footer>
+
+    <script>
+        var toggle = document.querySelector('.nav-toggle');
+        var nav = document.getElementById('nav');
+        toggle.addEventListener('click', function() {
+            var open = nav.classList.toggle('nav--open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
+
+</body>
+</html>

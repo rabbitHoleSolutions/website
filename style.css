@@ -706,6 +706,23 @@ section {
 .pill-shipped { color: #00b894; border: 1px solid rgba(0, 184, 148, 0.3); }
 .pill-beta    { color: #fdcb6e; border: 1px solid rgba(253, 203, 110, 0.3); }
 
+/* A plain-spoken status note on a product page (an early release, say),
+   in the beta pill's colour so the two read together. */
+.notice {
+    max-width: 68ch;
+    border: 1px solid rgba(253, 203, 110, 0.3);
+    border-left: 3px solid #fdcb6e;
+    border-radius: 4px;
+    padding: var(--space-md) var(--space-lg);
+    margin: 0 0 var(--space-xl);
+    background: var(--color-bg-card);
+}
+
+.notice p { color: var(--color-text-muted); margin-bottom: var(--space-sm); }
+.notice p:last-child { margin-bottom: 0; }
+.notice strong { color: var(--color-text); font-weight: 500; }
+.notice a { color: var(--color-text); }
+
 .cta-row {
     display: flex;
     flex-wrap: wrap;
