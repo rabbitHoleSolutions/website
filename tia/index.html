@@ -79,7 +79,9 @@
                     <span class="stamp" aria-hidden="true">Rumored</span>
                     <h2>Case file RHS-0451</h2>
                     <dl>
+                        <!-- Note to self: do NOT put what T.I.A. stands for on the website. -->
                         <div><dt>Codename</dt><dd>TIA</dd></div>
+                        <div><dt>Stands for</dt><dd><span class="redact" tabindex="0" title="Declassified">Total Information Awareness</span></dd></div>
                         <div><dt>Status</dt><dd>Rumored. Not announced, not for sale, not on GitHub.</dd></div>
                         <div><dt>Classification</dt><dd>Top secret // rabbit hole</dd></div>
                         <div><dt>Last seen</dt><dd>On a monitor in New Westminster, BC, VJing a Tangerine Dream record</dd></div>
@@ -346,6 +348,14 @@
         </div>
     </main>
 
+    <dialog class="lightbox" id="lightbox" aria-label="Screenshot, full size">
+        <img alt="">
+        <p class="lightbox-cap"></p>
+        <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+        <button class="lightbox-step prev" type="button" aria-label="Previous screenshot">&lsaquo;</button>
+        <button class="lightbox-step next" type="button" aria-label="Next screenshot">&rsaquo;</button>
+    </dialog>
+
     <footer class="footer">
         <div class="container">
             <img src="/inverted.png" alt="" class="footer-logo" width="40" height="47">
@@ -361,6 +371,42 @@
             var open = nav.classList.toggle('nav--open');
             toggle.setAttribute('aria-expanded', open);
         });
+
+        // Screenshots open full size (img/tia-full/), and step through with the arrow keys
+        (function() {
+            var box = document.getElementById('lightbox');
+            var big = box.querySelector('img');
+            var cap = box.querySelector('.lightbox-cap');
+            var shots = Array.prototype.filter.call(document.querySelectorAll('main img'), function(img) {
+                return /\/img\/tia-[\w-]+\.webp$/.test(img.getAttribute('src')) && !img.closest('.compare');
+            });
+            var at = 0;
+            function show(i) {
+                at = (i + shots.length) % shots.length;
+                var img = shots[at];
+                var fig = img.closest('figure');
+                big.src = img.getAttribute('src').replace('/img/', '/img/tia-full/');
+                big.alt = img.alt;
+                cap.textContent = (fig && fig.querySelector('figcaption') ? fig.querySelector('figcaption').textContent : img.alt);
+            }
+            shots.forEach(function(img, i) {
+                img.classList.add('zoomable');
+                img.tabIndex = 0;
+                img.setAttribute('role', 'button');
+                img.addEventListener('click', function() { show(i); box.showModal(); });
+                img.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i); box.showModal(); } });
+            });
+            box.querySelector('.lightbox-close').addEventListener('click', function() { box.close(); });
+            box.querySelector('.prev').addEventListener('click', function() { show(at - 1); });
+            box.querySelector('.next').addEventListener('click', function() { show(at + 1); });
+            // A click outside the picture closes it
+            box.addEventListener('click', function(e) { if (e.target === box) box.close(); });
+            box.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') show(at - 1);
+                else if (e.key === 'ArrowRight') show(at + 1);
+            });
+            box.addEventListener('close', function() { shots[at].focus({ preventScroll: true }); });
+        })();
 
         // The theme wipe
         document.querySelectorAll('.compare').forEach(function(box) {

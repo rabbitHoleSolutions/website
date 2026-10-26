@@ -1289,6 +1289,68 @@ figcaption {
 .signoff h2 { margin-bottom: var(--space-md); }
 .signoff p { color: var(--color-text-muted); max-width: 56ch; margin: 0 auto var(--space-md); }
 
+/* Screenshots open full size in a lightbox */
+.zoomable { cursor: zoom-in; }
+.zoomable:focus-visible { outline: 2px solid var(--color-text-muted); outline-offset: 3px; }
+
+.lightbox {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    border: 0;
+    padding: var(--space-lg) var(--space-xl);
+    background: rgba(0, 0, 0, 0.92);
+    color: var(--color-text);
+}
+
+.lightbox[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.lightbox::backdrop { background: rgba(0, 0, 0, 0.6); }
+
+.lightbox img {
+    max-width: 100%;
+    max-height: calc(100vh - 7rem);
+    width: auto;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-cap {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    max-width: 90ch;
+}
+
+.lightbox button {
+    position: absolute;
+    background: rgba(17, 17, 17, 0.8);
+    border: 1px solid var(--color-border-hover);
+    color: var(--color-text-bright);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox button:hover { background: var(--color-bg-card-hover); }
+.lightbox-close { top: var(--space-md); right: var(--space-md); }
+.lightbox-step { top: 50%; transform: translateY(-50%); }
+.lightbox-step.prev { left: var(--space-md); }
+.lightbox-step.next { right: var(--space-md); }
+
 @media (prefers-reduced-motion: reduce) {
     .leak-strip span,
     .tia-orb-bars line,
@@ -1412,4 +1474,7 @@ figcaption {
     .stamp { right: 6px; }
 
     .esper-readout { font-size: 0.62rem; gap: 1em; }
+
+    .lightbox { padding: var(--space-xl) var(--space-sm); }
+    .lightbox-step { top: auto; bottom: var(--space-md); transform: none; }
 }
